@@ -29,9 +29,9 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker') {
-                        sh "docker tag starbucks tirupatipallu/cicd:1.0.0"
+                        sh "docker tag starbucks tirupatipallu/cicd:latest"
                     //imagetag <username>/<docker repository>
-                        sh "docker push tirupatipallu/starbucks:1.0.0"
+                        sh "docker push tirupatipallu/cicd:latest"
                         //<username>/<image-name>
                     }
                 }
